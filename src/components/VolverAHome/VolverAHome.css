@@ -1,0 +1,98 @@
+/* VolverAHome.css */
+
+.volver-a-home .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.volver-a-home .home-button {
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para destacar el botón */
+  border: 2px solid white; /* Borde blanco para mayor contraste */
+  border-radius: 8px; /* Bordes redondeados */
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem; /* Tamaño de fuente relativo */
+  padding: 1rem 2rem; /* Espaciado interno relativo */
+  transition: background 0.3s, transform 0.3s; /* Transición suave para efectos */
+}
+
+.volver-a-home .home-button:hover {
+  background: rgba(255, 255, 255, 0.2); /* Cambio de fondo al pasar el ratón */
+  transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+}
+
+.volver-a-home .home-button svg {
+  margin-right: 0.5rem;
+}
+
+.volver-a-home .home-button span {
+  font-family: 'Poppins', sans-serif; /* Usa la fuente Poppins si la tienes configurada globalmente */
+  font-size: 1rem; /* Tamaño de fuente relativo */
+}
+
+/* Media Queries para ajustar en pantallas más grandes o más pequeñas */
+@media (min-width: 1200px) { /* Para pantallas de 1200 px y superiores */
+  .volver-a-home .home-button {
+    font-size: 2rem;
+    padding: 1.5rem 3rem;
+  }
+
+  .volver-a-home .home-button svg {
+    margin-right: 1rem;
+  }
+
+  .volver-a-home .home-button span {
+    font-size: 1.5rem; /* Tamaño de texto más grande */
+  }
+}
+
+@media (min-width: 1920px) { /* Para pantallas 1080p y superiores */
+  .volver-a-home .home-button {
+    font-size: 2rem;
+    padding: 1.8rem 3.5rem;
+  }
+
+  .volver-a-home .home-button svg {
+    margin-right: 1.2rem;
+  }
+
+  .volver-a-home .home-button span {
+    font-size: 3rem; /* Tamaño de texto más grande */
+  }
+}
+
+@media (min-width: 3840px) { /* Para pantallas 4K */
+  .volver-a-home .home-button {
+    font-size: 3rem;
+    padding: 2rem 4rem;
+  }
+
+  .volver-a-home .home-button svg {
+    margin-right: 1.5rem;
+  }
+
+  .volver-a-home .home-button span {
+    font-size: 2.5rem; /* Tamaño de texto más grande */
+  }
+}
+
+@media (max-width: 768px) { /* Para pantallas móviles */
+  .volver-a-home .home-button {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .volver-a-home .home-button svg {
+    margin-right: 0.4rem;
+  }
+
+  .volver-a-home .home-button span {
+    font-size: 1rem; /* Tamaño de texto más pequeño */
+  }
+}

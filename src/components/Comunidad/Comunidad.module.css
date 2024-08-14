@@ -1,0 +1,86 @@
+/* src/components/Comunidad.module.css */
+.comunidad {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; 
+  background-size: cover; 
+  background-position: center; 
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  margin-left: 2rem;
+
+}
+
+.header h1 {
+  font-size: 2rem; 
+  margin-bottom: 10px; 
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  
+}
+
+.locationIcon {
+  width: 30px;
+  height: 30px;
+  color: red; 
+}
+
+.location p {
+  font-size: 1.2rem; 
+  margin: 0; 
+}
+
+@media (min-width: 1600px) {
+  .header h1 {
+    font-size: 8rem;
+  }
+  .location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .locationIcon {
+    width: 5rem;
+    height: 5rem;
+    color: red; 
+  }
+  
+  .location p {
+    font-size: 4rem;
+    margin: 0; 
+  }
+}
+@media (max-width: 1200px) {
+  .header h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .header h1 {
+    font-size: 2rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header h1 {
+    font-size: 1.2rem; 
+  }
+}

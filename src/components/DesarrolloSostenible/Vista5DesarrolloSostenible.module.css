@@ -1,0 +1,163 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.header {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.headerBox {
+  background-color: #4CAF50; /* Color verde */
+  color: white;
+  padding: 20px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.content {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente las columnas */
+  align-items: center;
+  margin-top: 60px; /* Espacio para el cuadro verde */
+  gap: 20px; /* Espacio entre las columnas */
+}
+
+.textContent {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: justify; /* Centra el texto dentro de la columna */
+}
+
+.textContent h1 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.textContent p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.imageContent {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center;
+}
+
+.imageContent img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Media Queries for larger screens (1200px and above) */
+@media (min-width: 1200px) {
+  .textContent {
+    padding: 30px;
+  }
+
+  .textContent h1 {
+    font-size: 2em;
+  }
+
+  .textContent p {
+    font-size: 1.4em;
+  }
+
+  .imageContent img {
+    max-width: 80%;
+  }
+}
+
+/* Media Queries for 2560px screens */
+@media (min-width: 2560px) {
+  .textContent {
+    padding: 40px;
+  }
+
+  .textContent h1 {
+    font-size: 4em;
+    font-weight: 900;
+  }
+
+  .textContent p {
+    font-size: 2em;
+  }
+
+  .imageContent img {
+    width: 80%;
+    max-width: 1200px;
+  }
+}
+
+/* Media Queries for 4K screens */
+@media (min-width: 3840px) {
+  .textContent {
+    padding: 50px;
+  }
+
+  .textContent h1 {
+    font-size: 3em;
+  }
+
+  .textContent p {
+    font-size: 1.8em;
+  }
+
+  .imageContent img {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Estilo base del botón de traducción */
+.translateButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: transparent; /* Fondo transparente */
+  border: 2px solid black; /* Borde negro */
+  border-radius: 10px;
+  color: black; /* Texto negro */
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s; /* Transición para fondo y borde */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Estilo del botón cuando el ratón pasa sobre él */
+.translateButton:hover {
+  background-color: rgba(215, 215, 215, 0.3); /* Color de fondo en hover */
+  border-color: black; /* Color del borde en hover (se mantiene negro) */
+  color: black; /* Color del texto en hover */
+}
+
+/* Media Queries para pantallas grandes */
+@media (min-width: 1200px) {
+  .translateButton {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .translateButton {
+    padding: 20px 40px;
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .translateButton {
+    padding: 25px 50px;
+    font-size: 2rem;
+  }
+}

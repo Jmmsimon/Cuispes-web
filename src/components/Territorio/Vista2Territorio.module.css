@@ -1,0 +1,164 @@
+/* src/components/Vista1Comunidad/Vista1Comunidad.module.css */
+
+.vista2comunidad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centrado horizontalmente */
+  padding: 20px;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+  background-position: center; /* Centra la imagen de fondo */
+}
+
+.content {
+  position: relative;
+  max-width: 600px; /* Ajustado para pantallas más grandes */
+  padding: 20px;
+  color: white;
+  z-index: 1;
+  border-radius: 15px;
+  font-size: 17px;
+  text-transform: none !important;
+  transform: translateY(-50%); /* Centra verticalmente el contenido */
+  
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra para un efecto más pronunciado */
+}
+
+.translateButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+.translateButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.fixedButtons {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* Responsive adjustments */
+@media (min-width: 3840px) {
+  .location {
+    font-size: 5rem;
+  }
+  .content {
+    font-size: 5rem;
+    max-width: 1000px; /* Ajustado para pantallas 4K */
+  }
+  .translateButton {
+    font-size: 2rem;
+    padding: 15px 30px; /* Aumenta el tamaño del botón */
+  }
+  .backgroundImage {
+    background-size: contain; /* Ajusta la imagen para que se contenga dentro del área */
+  }
+}
+
+@media (min-width: 1600px) {
+  .location {
+    font-size: 5rem;
+  }
+  .content {
+
+    font-size: 4rem;
+    max-width: 70%; /* Ajustado para pantallas más grandes */
+  }
+  .translateButton {
+    margin-top: 10px;
+    padding: 20px 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Poppins", sans-serif;
+  }
+  .backgroundImage {
+    background-size: contain; /* Ajusta la imagen para que se contenga dentro del área */
+  }
+}
+
+@media (max-width: 1200px) {
+  .location {
+    font-size: 2.5rem;
+  }
+  .content {
+    font-size: 2rem;
+    max-width: 900px; /* Ajustado para pantallas más grandes */
+  }
+  .translateButton {
+    font-size: 1.6rem;
+    padding: 12px 24px; /* Ajusta el tamaño del botón */
+  }
+  .backgroundImage {
+    background-size: contain; /* Ajusta la imagen para que se contenga dentro del área */
+  }
+}
+
+@media (max-width: 992px) {
+  .location {
+    font-size: 2rem;
+  }
+  .content {
+    font-size: 1.5rem;
+  }
+  .translateButton {
+    font-size: 1.4rem;
+    padding: 10px 20px; /* Ajusta el tamaño del botón */
+  }
+  .backgroundImage {
+    background-size: contain; /* Ajusta la imagen para que se contenga dentro del área */
+  }
+}
+
+@media (max-width: 768px) {
+  .location {
+    font-size: 1.75rem;
+  }
+  .content {
+    font-size: 1.25rem;
+  }
+  .translateButton {
+    font-size: 1.2rem;
+    padding: 8px 16px; /* Ajusta el tamaño del botón */
+  }
+  .backgroundImage {
+    background-size: contain; /* Ajusta la imagen para que se contenga dentro del área */
+  }
+}
+
+@media (max-width: 576px) {
+  .location {
+    font-size: 1.5rem;
+  }
+  .content {
+    font-size: 1rem;
+  }
+  .translateButton {
+    font-size: 1rem;
+    padding: 6px 12px; /* Ajusta el tamaño del botón */
+  }
+  .backgroundImage {
+    background-size: contain; /* Ajusta la imagen para que se contenga dentro del área */
+  }
+}

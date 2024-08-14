@@ -1,0 +1,17 @@
+/* Asegúrate de que el body y html no tengan margen ni padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Evita el scroll */
+  height: 100%;
+}
+
+/* Asegúrate de que el contenedor principal de tu aplicación ocupe todo el viewport */
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Evita el scroll */
+}
+
+
+

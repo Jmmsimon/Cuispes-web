@@ -1,0 +1,204 @@
+/* src/components/Vista1Comunidad/Vista1Comunidad.module.css */
+
+.vista1comunidad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.translateButton {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.translateButton svg {
+  margin-right: 0.5rem;
+}
+
+.location {
+  font-size: 2rem;
+  top: -2em;
+  position: relative;
+}
+
+.showLocationButton {
+  margin-top: 10px;
+  padding: 20px 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+.showLocationButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);  
+}
+
+.content {
+  position: relative;
+  max-width: 600px;
+  padding: 20px;
+  color: white;
+  z-index: 1;
+  border-radius: 15px;
+  font-size: 17px;
+  text-transform: none !important;
+  margin-left: 40px; /* Añadido para mover el texto hacia la derecha */
+}
+
+.translateButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+.translateButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.fixedButtons {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* Responsive adjustments */
+@media (min-width: 3840px) {
+  .location {
+    font-size: 5rem;
+  }
+  .content {
+    font-size: 5rem;
+    max-width: 1000px;
+    margin-left: 100px; /* Ajustado para pantallas 4K */
+  }
+  .translateButton {
+    font-size: 2rem;
+    padding: 15px 30px;
+  }
+  .backgroundImage {
+    background-size: contain;
+  }
+}
+
+@media (min-width: 1600px) {
+  .location {
+    font-size: 5rem;
+  }
+  .content {
+    font-size: 4rem;
+    max-width: 50%;
+    margin-left: 100px; /* Ajustado para pantallas grandes */
+  }
+  .translateButton {
+    margin-top: 10px;
+    padding: 20px 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Poppins", sans-serif;
+  }
+  .backgroundImage {
+    background-size: contain;
+  }
+}
+
+@media (max-width: 1200px) {
+  .location {
+    font-size: 2.5rem;
+  }
+  .content {
+    font-size: 2rem;
+    max-width: 900px;
+    margin-left: 30px; /* Ajustado para pantallas medianas */
+  }
+  .translateButton {
+    font-size: 1.6rem;
+    padding: 12px 24px;
+  }
+  .backgroundImage {
+    background-size: contain;
+  }
+}
+
+@media (max-width: 992px) {
+  .location {
+    font-size: 2rem;
+  }
+  .content {
+    font-size: 1.5rem;
+    margin-left: 20px; /* Ajustado para pantallas más pequeñas */
+  }
+  .translateButton {
+    font-size: 1.4rem;
+    padding: 10px 20px;
+  }
+  .backgroundImage {
+    background-size: contain;
+  }
+}
+
+@media (max-width: 768px) {
+  .location {
+    font-size: 1.75rem;
+  }
+  .content {
+    font-size: 1.25rem;
+    margin-left: 15px; /* Ajustado para pantallas pequeñas */
+  }
+  .translateButton {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+  }
+  .backgroundImage {
+    background-size: contain;
+  }
+}
+
+@media (max-width: 576px) {
+  .location {
+    font-size: 1.5rem;
+  }
+  .content {
+    font-size: 1rem;
+    margin-left: 10px; /* Ajustado para pantallas extra pequeñas */
+  }
+  .translateButton {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+  .backgroundImage {
+    background-size: contain;
+  }
+}

@@ -1,0 +1,32 @@
+/* src/index.css */
+
+/* Establece la tipografía por defecto para todo el proyecto */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400; /* Regular weight by default */
+  font-style: normal;
+}
+
+/* Clases para estilos específicos de tipografía */
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.poppins-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* src/index.css */
+#root {
+  margin: 0;
+  padding: 0;
+  /* Asegúrate de que no haya padding aquí */
+}
