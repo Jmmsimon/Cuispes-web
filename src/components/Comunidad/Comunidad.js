@@ -1,13 +1,24 @@
 // src/components/Comunidad/Comunidad.js
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faLanguage } from '@fortawesome/free-solid-svg-icons';
 import Botones from '../Botones'; 
 import styles from './Comunidad.module.css'; 
 import backgroundImage from '../../assets/banner_principal_comunidad.jpg'; 
 
 const Comunidad = () => {
+  const [isEnglish, setIsEnglish] = useState(false);
+
+  const toggleLanguage = () => {
+    setIsEnglish(!isEnglish);
+  };
+
+  const titleSpanish = 'COMUNIDAD';
+  const titleEnglish = 'COMMUNITY';
+  const textSpanish = 'Distrito de Cuispes';
+  const textEnglish = 'District of Cuispes';
+
   return (
     <>
       <motion.div
@@ -25,11 +36,18 @@ const Comunidad = () => {
         transition={{ duration: 0.5 }}
       >
         <div className={styles.header}>
-          <h1>COMUNIDAD</h1> 
+          <h1>{isEnglish ? titleEnglish : titleSpanish}</h1> 
           <div className={styles.location}>
             <FontAwesomeIcon icon={faMapMarkerAlt} className={styles.locationIcon} />
-            <p>Distrito de Cuispes</p>
+            <p>{isEnglish ? textEnglish : textSpanish}</p>
           </div>
+        </div>
+
+        <div className={styles.translateButtonContainer}>
+          <button className={styles.translateButton} onClick={toggleLanguage}>
+            <FontAwesomeIcon icon={faLanguage} size="2x" className={styles.icon} />
+            {isEnglish ? ' Español' : ' English'}
+          </button>
         </div>
       </motion.div>
       <Botones prevPath="" nextPath="/comunidad/vista1" /> 

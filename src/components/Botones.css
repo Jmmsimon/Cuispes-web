@@ -2,102 +2,27 @@
 
 .boton-container {
   position: fixed;
-  bottom: 10px;
+  bottom: 10px; 
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.8);
   border-radius: 30px;
-  padding: 1rem; /* Espacio interno en el contenedor */
+  padding: 10px;
   display: flex;
-  gap: 2rem; /* Separación entre los botones */
+  gap: 1.5rem; 
   z-index: 1000;
-  margin-bottom: 2em;
 }
 
 .boton {
   background: transparent;
   border: none;
   color: white;
-  font-size: 2rem; /* Tamaño inicial del icono */
+  font-size: 1.5rem; 
   cursor: pointer;
   transition: transform 0.3s, color 0.3s;
-  padding: 0.5rem; /* Espacio interno para los botones */
 }
 
 .boton:hover {
-  transform: scale(1.2);
-  color: #ddd;
+  transform: scale(1.5);
 }
 
-/* Responsive adjustments for large screens */
-@media (min-width: 3840px) { /* Adjustments for 4K screens */
-  .boton-container {
-    padding: 1.5rem; /* Espacio interno en el contenedor para pantallas grandes */
-    gap: 3rem; /* Mayor separación entre los botones */
-  }
-
-  .boton {
-    font-size: 2.5rem; /* Aumenta el tamaño del icono para pantallas 4K */
-    padding: 0.75rem; /* Ajusta el espacio interno en los botones */
-  }
-}
-
-@media (min-width: 1600px) {
-  .boton-container {
-    padding: 1.2rem;
-    gap: 2.5rem;
-  }
-
-  .boton {
-    font-size: 4rem;
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 1200px) {
-  .boton-container {
-    padding: 1rem;
-    gap: 2rem;
-  }
-
-  .boton {
-    font-size: 2rem;
-    padding: 0.5rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .boton-container {
-    padding: 0.8rem;
-    gap: 1.5rem;
-  }
-
-  .boton {
-    font-size: 1.8rem;
-    padding: 0.4rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .boton-container {
-    padding: 0.6rem;
-    gap: 1rem;
-  }
-
-  .boton {
-    font-size: 1.6rem;
-    padding: 0.3rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .boton-container {
-    padding: 0.5rem;
-    gap: 0.8rem;
-  }
-
-  .boton {
-    font-size: 1.4rem;
-    padding: 0.2rem;
-  }
-}

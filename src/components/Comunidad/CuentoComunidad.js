@@ -70,7 +70,9 @@ const CuentoComunidad = () => {
           <p>
             {translated ? translatedText : text}
           </p>
-          <div className={styles['button-container']}>
+          
+        </div>
+        <div className={styles['button-container']}>
             <button className={styles['play-button']} onClick={handlePlayPause}>
               <FontAwesomeIcon icon={isSpeaking ? faPause : faPlay} size="2x" />
             </button>
@@ -79,7 +81,6 @@ const CuentoComunidad = () => {
               {translated ? ' Español' : ' English'}
             </button>
           </div>
-        </div>
       </motion.div>
       <Botones prevPath="/comunidad/vista1" nextPath="/comunidad/volverahome" />
     </>

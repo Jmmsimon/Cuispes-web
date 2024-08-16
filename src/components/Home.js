@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import './Home.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLanguage } from '@fortawesome/free-solid-svg-icons';
+import styles from './Home.module.css';
 import backgroundImage from '../assets/banner_principal.jpg';
 import naturalezaAudio from '../assets/naturaleza.mp3'; 
-import logo from '../assets/logo.png'; // Importa el logo
+import logo from '../assets/logo.png'; 
 
 const Home = () => {
+  const [isEnglish, setIsEnglish] = useState(false);
+
   useEffect(() => {
     const audio = new Audio(naturalezaAudio);
 
@@ -26,50 +30,81 @@ const Home = () => {
     };
   }, []);
 
+  const handleTranslate = () => {
+    setIsEnglish(!isEnglish);
+  };
+
   return (
     <motion.div
-      className="home-container"
+      className={styles['home-container']}
       style={{ backgroundImage: `url(${backgroundImage})` }}
       initial={{ x: -300, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: 300, opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <img src={logo} alt="Logo" className="logo" /> {/* Añade el logo */}
+      <img src={logo} alt="Logo" className={styles.logo} />
       <motion.div
-        className="nav-buttons"
+        className={styles['nav-buttons']}
         initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 100, opacity: 1 }}  // Ajuste para bajar los botones un poco
+        animate={{ y: 100, opacity: 1 }}
         transition={{ type: 'spring', stiffness: 150, damping: 10 }}
       >
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <Link className="nav-button" to="/comunidad">Comunidad</Link>
+          <Link className={styles['nav-button']} to="/comunidad">
+            {isEnglish ? 'Community' : 'Comunidad'}
+          </Link>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <Link className="nav-button" to="/territorio">Territorio</Link>
+          <Link className={styles['nav-button']} to="/territorio">
+            {isEnglish ? 'Territory' : 'Territorio'}
+          </Link>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <Link className="nav-button" to="/biodiversidad">Biodiversidad</Link>
+          <Link className={styles['nav-button']} to="/biodiversidad">
+            {isEnglish ? 'Biodiversity' : 'Biodiversidad'}
+          </Link>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <Link className="nav-button" to="/desarrollosostenible">Desarrollo Sostenible</Link>
+          <Link className={styles['nav-button']} to="/desarrollosostenible">
+            {isEnglish ? 'Sustainable Development' : 'Desarrollo Sostenible'}
+          </Link>
         </motion.div>
       </motion.div>
-      <div className="text-container">
-        <h1>La vida en Comunidad <br /> y Naturaleza</h1>
-      </div>
+      <div className={styles['text-container']}>
+      <h1>
+        {isEnglish
+          ? (
+            <>
+              Life in Community<br />
+              and Nature
+            </>
+          )
+          : (
+            <>
+              La vida en Comunidad<br />
+              y Naturaleza
+            </>
+          )}
+      </h1>
+    </div>
+
+      <button className={styles['translate-button']} onClick={handleTranslate}>
+        <FontAwesomeIcon icon={faLanguage} size="2x" />
+        {isEnglish ? ' Español' : ' English'}
+      </button>
     </motion.div>
   );
 };

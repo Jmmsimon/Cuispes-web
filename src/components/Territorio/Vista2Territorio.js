@@ -48,7 +48,7 @@ const Vista2Comunidad = () => {
         </motion.div>
       </motion.div>
       <div className={styles.fixedButtons}>
-        <Botones prevPath="/territorio/vista1" nextPath="/territorio/volverahome" />
+        <Botones prevPath="/territorio/vista1" nextPath="/territorio/vista3" />
       </div>
     </div>
     

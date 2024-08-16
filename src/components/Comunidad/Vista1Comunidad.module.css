@@ -1,5 +1,4 @@
 /* src/components/Vista1Comunidad/Vista1Comunidad.module.css */
-
 .vista1comunidad {
   display: flex;
   flex-direction: column;
@@ -13,43 +12,44 @@
   background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
   background-position: center; /* Centra la imagen de fondo */
 }
-.translateButton {
-  background: transparent;
-  border: none;
+
+.content {
+  position: relative;
+  max-width: 600px; /* Ajustado para pantallas más grandes */
+  padding: 20px;
   color: white;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  margin-top: 1rem;
+  z-index: 1;
+  border-radius: 15px;
+  font-size: 17px;
+  text-transform: none !important;
 }
 
-.translateButton svg {
-  margin-right: 0.5rem;
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../../assets/VectorNube.png') no-repeat;
+  background-size: 50% auto; /* Ajusta la imagen para que cubra toda la pantalla */
+  background-position: bottom left; /* Ajusta la posición de la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  z-index: 0;
 }
 
 .location {
   font-size: 2rem;
-  top: -2em;
-  position: relative;
 }
 
-/* _____________________________________________________________________________________ */
 .showLocationButton {
-  margin-top: 10px;
-    padding: 20px 25px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-family: "Poppins", sans-serif;
-}
-
-.showLocationButton:hover {
+  padding: 10px 20px;
   background-color: rgba(255, 255, 255, 0.3);  
+  border-radius: 15px;
+  border: none;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .locationImageContainer {
@@ -79,52 +79,12 @@
 }
 
 .locationImage {
-  width: 80vw; /* Ajusta el ancho al 80% del ancho de la ventana */
+  width: 100vw; /* Ajusta el ancho al 80% del ancho de la ventana */
   max-width: 400px; /* Ancho máximo para pantallas pequeñas */
   height: auto; /* Mantiene la relación de aspecto */
   border: 2px solid #000;
   border-radius: 8px; /* Bordes redondeados para la imagen */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Sombra de la imagen */
-}
-
-/* Media Queries para pantallas más pequeñas */
-@media (min-width: 3840px) {
-  .locationImageContainer {
-    right: 40px; /* Menos espacio del borde derecho en pantallas pequeñas */
-  }
-
-  .locationImage {
-    width: 90vw; /* Ancho ajustado al 90% de la ventana */
-    max-width: 1200px; /* Ancho máximo para pantallas muy pequeñas */
-  }
-
-}
-
-@media (min-width: 1600px) {
-  .locationImageContainer {
-    right: 50px; /* Menos espacio del borde derecho en pantallas pequeñas */
-  }
-
-  .locationImage {
-    width: 90vw; /* Ancho ajustado al 90% de la ventana */
-    max-width: 1250px; /* Ancho máximo para pantallas muy pequeñas */
-  }
-
-}
-@media (max-width: 600px) {
-  .locationImageContainer {
-    right: 10px; /* Menos espacio del borde derecho en pantallas pequeñas */
-  }
-
-  .locationImage {
-    width: 90vw; /* Ancho ajustado al 90% de la ventana */
-    max-width: 300px; /* Ancho máximo para pantallas muy pequeñas */
-  }
-
-  .showLocationButton {
-    padding: 10px 16px; /* Ajusta el tamaño del botón */
-    font-size: 14px; /* Ajusta el tamaño de la fuente del botón */
-  }
 }
 
 @keyframes slideIn {
@@ -137,170 +97,34 @@
     opacity: 1;
   }
 }
-.content {
-  position: relative;
-  max-width: 600px; /* Ajustado para pantallas más grandes */
-  padding: 20px;
-  color: white;
-  z-index: 1;
-  border-radius: 15px;
-  font-size: 17px;
-  text-transform: none !important;
-}
 
-.backgroundImage {
+
+
+/* Agrega esto al archivo Vista1Comunidad.module.css */
+.translateButtonContainer {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('../../assets/VectorNube.png') no-repeat;
-  background-size: 50% auto; /* Ajusta la imagen para que cubra toda la pantalla */
-  background-position: bottom left; /* Ajusta la posición de la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  z-index: 0;
+  bottom: 4rem;
+  right: 4rem;
 }
-
-.ubicacionImage {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  width: 100px;
-  height: auto;
-  z-index: 2;
-}
-
 .translateButton {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.588);
+  color: rgb(0, 0, 0);
   border: none;
-  color: white;
-  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.icon {
+  margin-right: 0.5rem; /* Ajusta el margen derecho del ícono para separarlo del texto */
 }
 
 .translateButton:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-0.2rem);
 }
 
-.fixedButtons {
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-}
-
-
-/* Responsive adjustments */
-@media (min-width: 3840px) {
-  .location {
-    font-size: 5rem;
-  }
-  .content {
-    font-size: 5rem;
-    max-width: 1000px; /* Ajustado para pantallas 4K */
-  }
-  .translateButton {
-    font-size: 2rem;
-    padding: 15px 30px; /* Aumenta el tamaño del botón */
-  }
-  .backgroundImage {
-    background-size: contain; /* Ajusta la imagen para que se contenga dentro del área */
-  }
-}
-
-@media (min-width: 1600px) {
-  .location {
-    font-size: 5rem;
-  }
-  .content {
-
-    font-size: 3rem;
-    max-width: 45%; /* Ajustado para pantallas más grandes */
-  }
-  .translateButton {
-    margin-top: 10px;
-    padding: 20px 25px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    border: none;
-    color: white;
-    font-size: 2.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-family: "Poppins", sans-serif;
-  }
-  .backgroundImage {
-    background-size: contain; /* Ajusta la imagen para que se contenga dentro del área */
-  }
-}
-
-@media (max-width: 1200px) {
-  .location {
-    font-size: 2.5rem;
-  }
-  .content {
-    font-size: 2rem;
-    max-width: 900px; /* Ajustado para pantallas más grandes */
-  }
-  .translateButton {
-    font-size: 1.6rem;
-    padding: 12px 24px; /* Ajusta el tamaño del botón */
-  }
-  .backgroundImage {
-    background-size: contain; /* Ajusta la imagen para que se contenga dentro del área */
-  }
-}
-
-@media (max-width: 992px) {
-  .location {
-    font-size: 2rem;
-  }
-  .content {
-    font-size: 1.5rem;
-  }
-  .translateButton {
-    font-size: 1.4rem;
-    padding: 10px 20px; /* Ajusta el tamaño del botón */
-  }
-  .backgroundImage {
-    background-size: contain; /* Ajusta la imagen para que se contenga dentro del área */
-  }
-}
-
-@media (max-width: 768px) {
-  .location {
-    font-size: 1.75rem;
-  }
-  .content {
-    font-size: 1.25rem;
-  }
-  .translateButton {
-    font-size: 1.2rem;
-    padding: 8px 16px; /* Ajusta el tamaño del botón */
-  }
-  .backgroundImage {
-    background-size: contain; /* Ajusta la imagen para que se contenga dentro del área */
-  }
-}
-
-@media (max-width: 576px) {
-  .location {
-    font-size: 1.5rem;
-  }
-  .content {
-    font-size: 1rem;
-  }
-  .translateButton {
-    font-size: 1rem;
-    padding: 6px 12px; /* Ajusta el tamaño del botón */
-  }
-  .backgroundImage {
-    background-size: contain; /* Ajusta la imagen para que se contenga dentro del área */
-  }
-}

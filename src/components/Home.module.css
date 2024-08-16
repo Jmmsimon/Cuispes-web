@@ -1,0 +1,91 @@
+.home-container {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  left: 4rem; /* Ajusta la distancia del logo desde el borde izquierdo */
+  top: 4rem; /* Ajusta la distancia del logo desde el borde superior */
+  width: 200px; /* Tamaño del logo */
+  height: auto;
+  z-index: 10; /* Asegúrate de que el logo esté por encima del contenido */
+}
+
+.nav-buttons {
+  position: absolute;
+  top: 1rem; /* Se ha bajado más la posición de los botones */
+  display: flex;
+  gap: 1rem; /* Usar rem para mejor escalabilidad */
+}
+
+.nav-button {
+  background-color: #597f31;
+  color: white;
+  padding: 0.5rem 1rem; /* Ajuste de padding usando rem */
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 400;
+  font-style: normal;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:hover {
+  background-color: #ba3902;
+  transform: translateY(-0.2rem);
+}
+
+.text-container {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+  color: white;
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7);
+}
+
+.text-container h1 {
+  font-weight: 700;
+  margin: 0;
+  margin-right: 3rem;
+  text-align: end;
+  line-height: 1.2;
+  font-size: 3em; /* Tamaño inicial para pantallas grandes */
+  font-family: 'Poppins', sans-serif; /* Asegúrate de que la fuente esté especificada si es necesaria */
+  text-transform: uppercase; /* Opcional, puede ayudar a ajustar el tamaño del texto */
+}
+/* Estilos para el botón de traducción */
+.translate-button {
+  position: absolute;
+  bottom: 4rem; /* Ajusta la distancia desde la parte inferior */
+  right: 4rem; /* Ajusta la distancia desde la parte derecha */
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.translate-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-0.2rem);
+}
+
+.translate-button svg {
+  margin-right: 0.5rem;
+}

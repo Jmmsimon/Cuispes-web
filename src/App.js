@@ -12,6 +12,7 @@ import VolverAHome from './components/VolverAHome/VolverAHome';
 import Territorio from './components/Territorio/Territorio';
 import Vista1Territorio from './components/Territorio/Vista1Territorio'
 import Vista2Territorio from './components/Territorio/Vista2Territorio'
+import Vista3Territorio from './components/Territorio/Vista3Territorio'
 import Biodiversidad from './components/Biodiversidad/Biodiversidad';
 import DesarrolloSostenible from './components/DesarrolloSostenible/DesarrolloSostenible'
 import Vista1Biodiversidad from './components/Biodiversidad/Vista1Biodiversidad';
@@ -38,6 +39,8 @@ const App = () => {
         <Route path="/territorio" element={<Territorio />} />
         <Route path="/territorio/vista1" element={<Vista1Territorio />} />
         <Route path="/territorio/vista2" element={<Vista2Territorio />} />
+        <Route path="/territorio/vista3" element={<Vista3Territorio />} />
+
         <Route path="/territorio/volverahome" element={<VolverAHome />} />
         <Route path="/biodiversidad" element={<Biodiversidad />} />
         {/* <Route path="/biodiversidad/vista1" element={<Vista1Biodiversidad />} /> */}

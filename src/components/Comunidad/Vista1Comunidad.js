@@ -1,9 +1,10 @@
+// src/components/Vista1Comunidad/Vista1Comunidad.js
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Botones from '../Botones'; // Asegúrate de que la ruta sea correcta
-import styles from './Vista1Comunidad.module.css'; // Usa CSS Módulos aquí
-import backgroundImage from '../../assets/banner_comunidad1.jpg'; // Asegúrate de que la ruta sea correcta
-import locationImage from '../../assets/ubicacion.png'; // Asegúrate de que la ruta sea correcta
+import Botones from '../Botones';
+import styles from './Vista1Comunidad.module.css';
+import backgroundImage from '../../assets/banner_comunidad1.jpg';
+import locationImage from '../../assets/ubicacion.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLanguage } from '@fortawesome/free-solid-svg-icons';
 
@@ -47,19 +48,22 @@ const Vista1Comunidad = () => {
           transition={{ duration: 1.2, type: 'spring', stiffness: 50 }}
         >
           <div className={styles.location}>
-            📍 Cuispes
+            📍Cuispes
           </div>
           <p>{isEnglish ? textEnglish : textSpanish}</p>
-          <button className={styles.translateButton} onClick={toggleLanguage}>
-            <FontAwesomeIcon icon={faLanguage} size="2x" />
-            {isEnglish ? ' Español' : ' English'}
-          </button>
+          
           <button className={styles.showLocationButton} onClick={toggleLocation}>
             Mostrar Ubicación
           </button>
         </motion.div>
+        <div className={styles.translateButtonContainer}>
+          <button className={styles.translateButton} onClick={toggleLanguage}>
+            <FontAwesomeIcon icon={faLanguage} size="2x" className={styles.icon} />
+            {isEnglish ? ' Español' : ' English'}
+          </button>
+        </div>
       </motion.div>
-      <div className={styles.fixedButtons}>
+      <div>
         <Botones prevPath="/comunidad" nextPath="/comunidad/vista2" />
       </div>
       {showLocation && (

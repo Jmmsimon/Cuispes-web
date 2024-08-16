@@ -1,11 +1,14 @@
-/* src/components/Comunidad.module.css */
 .comunidad {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh; 
-  background-size: cover; 
-  background-position: center; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #000; /* Fondo de respaldo por si el backgroundImage no carga */
+  background-image: url('../../assets/banner_principal_comunidad.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
 }
 
 .header {
@@ -13,74 +16,63 @@
   top: 20px;
   left: 20px;
   color: white;
-  margin-left: 2rem;
-
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra del texto */
 }
 
 .header h1 {
-  font-size: 2rem; 
-  margin-bottom: 10px; 
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 0;
 }
 
 .location {
   display: flex;
   align-items: center;
-  gap: 5px;
-  
+  margin-top: 10px;
 }
 
 .locationIcon {
-  width: 30px;
-  height: 30px;
-  color: red; 
+  margin-right: 10px;
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Sombra del ícono */
 }
 
 .location p {
-  font-size: 1.2rem; 
-  margin: 0; 
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Sombra del texto */
 }
 
-@media (min-width: 1600px) {
-  .header h1 {
-    font-size: 8rem;
-  }
-  .location {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  
-  .locationIcon {
-    width: 5rem;
-    height: 5rem;
-    color: red; 
-  }
-  
-  .location p {
-    font-size: 4rem;
-    margin: 0; 
-  }
-}
-@media (max-width: 1200px) {
-  .header h1 {
-    font-size: 3rem;
-  }
+.translateButtonContainer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
-@media (max-width: 992px) {
-  .header h1 {
-    font-size: 2rem; 
-  }
+.translateButton {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 10;
 }
 
-@media (max-width: 768px) {
-  .header h1 {
-    font-size: 1.5rem;
-  }
+.icon {
+  margin-right: 0.5rem; /* Ajusta el margen derecho del ícono para separarlo del texto */
 }
 
-@media (max-width: 576px) {
-  .header h1 {
-    font-size: 1.2rem; 
-  }
+.translateButton:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-0.2rem);
 }

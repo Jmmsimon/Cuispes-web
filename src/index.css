@@ -1,5 +1,3 @@
-/* src/index.css */
-
 /* Establece la tipografía por defecto para todo el proyecto */
 body {
   font-family: "Poppins", sans-serif;
@@ -24,9 +22,19 @@ body {
   font-style: italic;
 }
 
-/* src/index.css */
+/* Aplicar la fuente Poppins a todos los elementos de encabezado y párrafos */
+h1, h2, h3, h4, p, a {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Estilo específico para botones */
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600; /* Peso de fuente para botones */
+}
+
+/* Estilos globales */
 #root {
   margin: 0;
   padding: 0;
-  /* Asegúrate de que no haya padding aquí */
 }
