@@ -82,24 +82,33 @@ const Home = () => {
             {isEnglish ? 'Sustainable Development' : 'Desarrollo Sostenible'}
           </Link>
         </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <Link className={styles['nav-button']} to="/deporte">
+            {isEnglish ? 'Sports' : 'Deporte'}
+          </Link>
+        </motion.div>
       </motion.div>
+
       <div className={styles['text-container']}>
-      <h1>
-        {isEnglish
-          ? (
-            <>
-              Life in Community<br />
-              and Nature
-            </>
-          )
-          : (
-            <>
-              La vida en Comunidad<br />
-              y Naturaleza
-            </>
-          )}
-      </h1>
-    </div>
+        <h1>
+          {isEnglish
+            ? (
+              <>
+                Life in Community<br />
+                and Nature
+              </>
+            )
+            : (
+              <>
+                La vida en Comunidad<br />
+                y Naturaleza
+              </>
+            )}
+        </h1>
+      </div>
 
       <button className={styles['translate-button']} onClick={handleTranslate}>
         <FontAwesomeIcon icon={faLanguage} size="2x" />

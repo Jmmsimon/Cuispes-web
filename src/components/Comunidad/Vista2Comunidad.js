@@ -55,7 +55,7 @@ const Vista2Comunidad = () => {
       </motion.div>
       
       <div className={styles.botonesContainer}>
-        <Botones prevPath="/comunidad/vista1" nextPath="/comunidad/cuento" />
+        <Botones prevPath="/comunidad/vista1" nextPath="/comunidad/video1" />
       </div>
     </div>
   );

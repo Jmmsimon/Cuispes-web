@@ -1,0 +1,15 @@
+/* src/components/Comunidad/Video1Comunidad.module.css */
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #00000066; /* Cambia este valor por el color que prefieras */
+
+}
+
+.video-player {
+  width: 80%;
+  max-width: 1000px;
+}

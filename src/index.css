@@ -8,7 +8,7 @@ body {
 /* Clases para estilos específicos de tipografía */
 .poppins-bold {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .poppins-regular {
@@ -23,7 +23,7 @@ body {
 }
 
 /* Aplicar la fuente Poppins a todos los elementos de encabezado y párrafos */
-h1, h2, h3, h4, p, a {
+h1, h2, h3, h4, p, a, li, ul {
   font-family: "Poppins", sans-serif;
 }
 
@@ -32,6 +32,7 @@ button {
   font-family: "Poppins", sans-serif;
   font-weight: 600; /* Peso de fuente para botones */
 }
+
 
 /* Estilos globales */
 #root {

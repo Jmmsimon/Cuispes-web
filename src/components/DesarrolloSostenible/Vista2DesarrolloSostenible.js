@@ -60,11 +60,10 @@ const Vista2DesarrolloSostenible = () => {
               : 'Imagina que de cada 10 amigos que tienes, 3 están en pobreza. En el año 2007, más de la mitad de las personas en Amazonas eran pobres, pero las cosas han mejorado mucho desde entonces. Aunque la pandemia trajo problemas, la región está volviendo a mejorar poco a poco.'
             }
           </p>
-          <button className={styles.translateButton} onClick={translateText}>
-            <FontAwesomeIcon icon={faLanguage} /> {isEnglish ? 'Español' : 'English'}
-          </button>
-         
+      
+          
         </motion.div>
+        
         <motion.div
           className={styles.imageContent}
           initial={{ opacity: 0, x: 50 }}
@@ -74,6 +73,12 @@ const Vista2DesarrolloSostenible = () => {
           <img src={mapaImage} alt="Mapa" />
         </motion.div>
       </motion.div>
+      <div className={styles.translateButtonContainer}>
+            <button className={styles.translateButton} onClick={translateText}>
+              <FontAwesomeIcon icon={faLanguage} size="2x" className={styles.icon} />
+              {isEnglish ? ' Español' : ' English'}
+            </button>
+          </div>
       <Botones prevPath="/desarrollosostenible/vista1" nextPath="/desarrollosostenible/vista3" />
     </div>
   );

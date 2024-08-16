@@ -21,7 +21,7 @@ const Vista4DesarrolloSostenible = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className={styles.headerBox}>ODS 4: Educación de Calidad</div>
+        <div className={styles.headerBox}>ODS SOCIALES</div>
       </motion.div>
       <motion.div
         className={styles.content}
@@ -48,9 +48,7 @@ const Vista4DesarrolloSostenible = () => {
               : 'En cuarto grado de primaria, el 31.4% de los estudiantes en Amazonas alcanzaron un nivel satisfactorio en matemáticas en 2019, aunque esto fue 2.6 puntos porcentuales menos que el promedio nacional (34%). Sin embargo, hubo una mejora de 4.7 puntos porcentuales en comparación con el año anterior en Amazonas (26.7%). En comprensión lectora, el 26.9% logró un nivel satisfactorio, lo que representa una diferencia de 7.6 puntos porcentuales menos que el promedio nacional para el mismo año (34.5%), y 2.1 puntos porcentuales menos que el logro del año anterior en Amazonas (29%).'
             }
           </p>
-          <button className={styles.translateButton} onClick={translateText}>
-            <FontAwesomeIcon icon={faLanguage} /> {isEnglish ? 'Español' : 'English'}
-          </button>
+    
         </motion.div>
         <motion.div
           className={styles.imageContent}
@@ -61,6 +59,12 @@ const Vista4DesarrolloSostenible = () => {
           <img src={mapaImage} alt="Mapa" />
         </motion.div>
       </motion.div>
+      <div className={styles.translateButtonContainer}>
+            <button className={styles.translateButton} onClick={translateText}>
+              <FontAwesomeIcon icon={faLanguage} size="2x" className={styles.icon} />
+              {isEnglish ? ' Español' : ' English'}
+            </button>
+          </div>
       <Botones prevPath="/desarrollosostenible/vista3" nextPath="/desarrollosostenible/vista5" />
     </div>
   );

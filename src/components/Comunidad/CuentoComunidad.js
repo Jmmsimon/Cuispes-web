@@ -82,7 +82,7 @@ const CuentoComunidad = () => {
             </button>
           </div>
       </motion.div>
-      <Botones prevPath="/comunidad/vista1" nextPath="/comunidad/volverahome" />
+      <Botones prevPath="/comunidad/video1" nextPath="/comunidad/volverahome" />
     </>
   );
 };

@@ -21,7 +21,7 @@ const Vista3DesarrolloSostenible = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className={styles.headerBox}>ODS 2: Hambre Cero</div>
+        <div className={styles.headerBox}>ODS SOCIALES</div>
       </motion.div>
       <motion.div
         className={styles.content}
@@ -42,9 +42,7 @@ const Vista3DesarrolloSostenible = () => {
               : 'En Amazonas, un lugar en Perú, algunos niños menores de 5 años no tienen suficiente comida buena todos los días. En 2021, el 19.2% de estos niños tenían este problema, que es más alto que el promedio del país (11.5%). Aunque ha habido veces en que esto ha mejorado desde el 2007, a veces ha empeorado también. En todo el país, generalmente está mejorando (ver Gráfico 2.1). Otra cosa importante es que el 0.4% de los niños en Amazonas tuvieron hambre severa en 2021, igual que el promedio del país. Desde 2010, esto ha mejorado un poco en Amazonas, pero a veces ha sido peor en algunos años (ver Gráfico 2.2), como en todo el país.'
             }
           </p>
-          <button className={styles.translateButton} onClick={translateText}>
-            <FontAwesomeIcon icon={faLanguage} /> {isEnglish ? 'Español' : 'English'}
-          </button>
+      
         </motion.div>
         <motion.div
           className={styles.imageContent}
@@ -55,6 +53,12 @@ const Vista3DesarrolloSostenible = () => {
           <img src={mapaImage} alt="Mapa" />
         </motion.div>
       </motion.div>
+      <div className={styles.translateButtonContainer}>
+            <button className={styles.translateButton} onClick={translateText}>
+              <FontAwesomeIcon icon={faLanguage} size="2x" className={styles.icon} />
+              {isEnglish ? ' Español' : ' English'}
+            </button>
+          </div>
       <Botones prevPath="/desarrollosostenible/vista2" nextPath="/desarrollosostenible/vista4" />
     </div>
   );

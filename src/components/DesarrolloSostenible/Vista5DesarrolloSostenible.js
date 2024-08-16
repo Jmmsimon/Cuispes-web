@@ -21,9 +21,7 @@ const Vista5DesarrolloSostenible = () => {
         animate={{ opacity: 1, x: 0, rotate: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className={styles.headerBox}>
-          {isEnglish ? 'SDG 6: Clean Water and Sanitation' : 'ODS 6: Agua limpia y saneamiento'}
-        </div>
+      <div className={styles.headerBox}>ODS SOCIALES</div>
       </motion.div>
       <motion.div
         className={styles.content}
@@ -52,9 +50,7 @@ const Vista5DesarrolloSostenible = () => {
               : 'Además, el 60.1% de la población en Amazonas tiene acceso a servicios de drenaje seguros en el 2021. Aunque esto es menos que el promedio nacional (76.5%) para el mismo año, ha habido un aumento desde el 2011 cuando solo el 38.5% tenía acceso seguro al drenaje.'
             }
           </p>
-          <button className={styles.translateButton} onClick={translateText}>
-            <FontAwesomeIcon icon={faLanguage} /> {isEnglish ? 'Español' : 'English'}
-          </button>
+        
         </motion.div>
         <motion.div
           className={styles.imageContent}
@@ -65,6 +61,12 @@ const Vista5DesarrolloSostenible = () => {
           <img src={mapaImage} alt="Mapa" />
         </motion.div>
       </motion.div>
+      <div className={styles.translateButtonContainer}>
+            <button className={styles.translateButton} onClick={translateText}>
+              <FontAwesomeIcon icon={faLanguage} size="2x" className={styles.icon} />
+              {isEnglish ? ' Español' : ' English'}
+            </button>
+          </div>
       <Botones prevPath="/desarrollosostenible/vista4" nextPath="/desarrollosostenible/vista6" />
     </div>
   );

@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Comunidad from './components/Comunidad/Comunidad';
 import Vista1Comunidad from './components/Comunidad/Vista1Comunidad'; 
 import Vista2Comunidad from './components/Comunidad/Vista2Comunidad';
+import Video1Comunidad from './components/Comunidad/Video1Comunidad'; // Importa la nueva vista
 import Vista3Comunidad from './components/Comunidad/Vista3Comunidad'
 import Vista4Comunidad from './components/Comunidad/Vista4Comunidad'
 import Vista5Comunidad from './components/Comunidad/Vista5Comunidad'
@@ -15,7 +16,6 @@ import Vista2Territorio from './components/Territorio/Vista2Territorio'
 import Vista3Territorio from './components/Territorio/Vista3Territorio'
 import Biodiversidad from './components/Biodiversidad/Biodiversidad';
 import DesarrolloSostenible from './components/DesarrolloSostenible/DesarrolloSostenible'
-import Vista1Biodiversidad from './components/Biodiversidad/Vista1Biodiversidad';
 import Vista1DesarrolloSostenible from './components/DesarrolloSostenible/Vista1DesarrolloSostenible';
 import Vista2DesarrolloSostenible from './components/DesarrolloSostenible/Vista2DesarrolloSostenible'
 import Vista3DesarrolloSostenible from './components/DesarrolloSostenible/Vista3DesarrolloSostenible'
@@ -31,6 +31,7 @@ const App = () => {
         <Route path="/comunidad" element={<Comunidad />} />
         <Route path="/comunidad/vista1" element={<Vista1Comunidad />} />
         <Route path="/comunidad/vista2" element={<Vista2Comunidad />} />
+        <Route path="/comunidad/video1" element={<Video1Comunidad />} /> {/* Nueva ruta */}
         <Route path="/comunidad/vista3" element={<Vista3Comunidad />} />
         <Route path="/comunidad/vista4" element={<Vista4Comunidad />} />
         <Route path="/comunidad/vista5" element={<Vista5Comunidad />} />
