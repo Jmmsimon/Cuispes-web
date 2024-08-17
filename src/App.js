@@ -21,7 +21,10 @@ import Vista2DesarrolloSostenible from './components/DesarrolloSostenible/Vista2
 import Vista3DesarrolloSostenible from './components/DesarrolloSostenible/Vista3DesarrolloSostenible'
 import Vista4DesarrolloSostenible from './components/DesarrolloSostenible/Vista4DesarrolloSostenible'
 import Vista5DesarrolloSostenible from './components/DesarrolloSostenible/Vista5DesarrolloSostenible'
+import Deporte from './components/Deporte/Deporte'
+
 import './App.css';
+import GaleriaDeImagenes from './components/Deporte/GaleriaDeImagenes';
 
 const App = () => {
   return (
@@ -51,6 +54,11 @@ const App = () => {
         <Route path="/desarrollosostenible/vista3" element={<Vista3DesarrolloSostenible />} />
         <Route path="/desarrollosostenible/vista4" element={<Vista4DesarrolloSostenible />} />
         <Route path="/desarrollosostenible/vista5" element={<Vista5DesarrolloSostenible />} />
+
+        <Route path="/deporte" element={<Deporte />} />
+        {/* <Route path="/deporte/galeria" element={<GaleriaDeImagenes />} /> */}
+        <Route path="/deporte/volverahome" element={<VolverAHome />} />
+
       </Routes>
     </Router>
   );

@@ -24,7 +24,7 @@ const VolverAHome = () => {
       <div className="content">
         <button className="home-button" onClick={() => window.location.href = '/'}>
           <FontAwesomeIcon icon={faHome} size="2x" />
-          <span>Volver a Home</span>
+          <span>Vover al menú Principal</span>
         </button>
       </div>
     </motion.div>

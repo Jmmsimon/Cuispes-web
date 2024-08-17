@@ -21,7 +21,7 @@ const Vista3Territorio = () => {
         variants={containerVariants}
         transition={transition}
       >
-        <p>
+        <p className={styles.text}>
           El distrito de Cuispes cuenta con la clasificación de suelo: 
           "Lithic Udorthents-Typic Dystrudepts", que describe a los suelos 
           que se han alterado o perturbado significativamente por la actividad humana. 
@@ -45,7 +45,6 @@ const Vista3Territorio = () => {
         />
       </motion.div>
       <Botones prevPath="/territorio/vista2" nextPath="/territorio/volverahome" />
-
     </div>
   );
 };

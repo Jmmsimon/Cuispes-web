@@ -59,8 +59,8 @@
   margin-right: 3rem;
   text-align: end;
   line-height: 1.2;
-  font-size: 3em; /* Tamaño inicial para pantallas grandes */
-  font-family: 'Poppins', sans-serif; /* Asegúrate de que la fuente esté especificada si es necesaria */
+  font-size: 3em; 
+  font-family: 'Poppins', sans-serif; 
   text-transform: uppercase; /* Opcional, puede ayudar a ajustar el tamaño del texto */
 }
 /* Estilos para el botón de traducción */
