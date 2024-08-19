@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import styles from './GaleriaDeImagenes.module.css';
 
-// Rutas de las imágenes
+import Botones from '../Botones'; 
+
 const images = [
   'deporte (1).jpg',
   'deporte (2).jpg',
@@ -26,23 +29,79 @@ const images = [
 ];
 
 const GaleriaDeImagenes = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const getPrevIndex = () =>
+    currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+  const getNextIndex = () => (currentIndex + 1) % images.length;
+
   return (
-    <div className={styles.container}>
-      {images.map((img, index) => (
+    <div className={styles.carouselContainer}>
+      <button onClick={prevImage} className={styles.prevButton}>
+        <FontAwesomeIcon icon={faChevronLeft} size="2x" /> {/* Tamaño del ícono aumentado */}
+      </button>
+
+      <div className={styles.imageAlbum}>
         <motion.div
-          key={index}
-          className={styles.imageWrapper}
-          whileHover={{ scale: 1.05 }}
+          className={`${styles.imageWrapper} ${styles.sideImageWrapper}`}
+          initial={{ scale: 1 }}
+          animate={{ scale: 0.9 }}
+          transition={{ duration: 0.5 }}
         >
           <img
-            src={require(`../../assets/deporte_img/${img}`)}
-            alt={`Deporte ${index + 1}`}
-            className={styles.image}
-            loading="lazy" // Habilita la carga diferida
+            src={require(`../../assets/deporte_img/${images[getPrevIndex()]}`)}
+            alt={`Deporte ${getPrevIndex() + 1}`}
+            className={`${styles.image} ${styles.sideImage}`}
+            loading="lazy"
           />
         </motion.div>
-      ))}
+
+        <motion.div
+          className={`${styles.imageWrapper} ${styles.mainImageWrapper}`}
+          initial={{ scale: 1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <img
+            src={require(`../../assets/deporte_img/${images[currentIndex]}`)}
+            alt={`Deporte ${currentIndex + 1}`}
+            className={`${styles.image} ${styles.mainImage}`}
+            loading="lazy"
+          />
+        </motion.div>
+
+        <motion.div
+          className={`${styles.imageWrapper} ${styles.sideImageWrapper}`}
+          initial={{ scale: 1 }}
+          animate={{ scale: 0.9 }}
+          transition={{ duration: 0.5 }}
+        >
+          <img
+            src={require(`../../assets/deporte_img/${images[getNextIndex()]}`)}
+            alt={`Deporte ${getNextIndex() + 1}`}
+            className={`${styles.image} ${styles.sideImage}`}
+            loading="lazy"
+          />
+        </motion.div>
+      </div>
+
+      <button onClick={nextImage} className={styles.nextButton}>
+        <FontAwesomeIcon icon={faChevronRight} size="2x" /> {/* Tamaño del ícono aumentado */}
+      </button>
+      <Botones prevPath="/deporte" nextPath="/deporte/volverahome" />
+
     </div>
+    
   );
 };
 

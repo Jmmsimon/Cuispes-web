@@ -1,11 +1,22 @@
-// src/components/Comunidad/Comunidad.js
-import React from 'react';
+// src/components/Territorio/Territorio.js
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt, faLanguage } from '@fortawesome/free-solid-svg-icons';
 import Botones from '../Botones'; 
 import styles from './Territorio.module.css'; 
 import backgroundImage from '../../assets/banner_territorio.jpg'; 
 
 const Territorio = () => {
+  const [isEnglish, setIsEnglish] = useState(false);
+
+  const toggleLanguage = () => {
+    setIsEnglish(!isEnglish);
+  };
+
+  const titleSpanish = 'Territorio';
+  const titleEnglish = 'Territory';
+
   return (
     <>
       <motion.div
@@ -22,14 +33,17 @@ const Territorio = () => {
         exit={{ x: 300, opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <motion.div
-          className={styles.header}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
-        >
-          <h1 className={styles.title}>Territorio</h1> 
-        </motion.div>
+        <div className={styles.header}>
+          <h1>{isEnglish ? titleEnglish : titleSpanish}</h1> 
+          
+        </div>
+
+        <div className={styles.translateButtonContainer}>
+          <button className={styles.translateButton} onClick={toggleLanguage}>
+            <FontAwesomeIcon icon={faLanguage} size="2x" className={styles.icon} />
+            {isEnglish ? ' Español' : ' English'}
+          </button>
+        </div>
       </motion.div>
       <Botones prevPath="" nextPath="/territorio/vista1" /> 
     </>

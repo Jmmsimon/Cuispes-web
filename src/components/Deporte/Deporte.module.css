@@ -6,8 +6,10 @@
 }
 
 .column {
+  background-color: rgba(75, 199, 75, 0.532); /* Fondo verde con transparencia */
+
   flex: 1;
-  margin: 0 10px;
+  margin: 0 ;
   display: flex;
   align-items: center;
   justify-content: center;

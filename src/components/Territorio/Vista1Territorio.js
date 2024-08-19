@@ -45,11 +45,13 @@ const Vista1Comunidad = () => {
           transition={{ duration: 1.2, type: 'spring', stiffness: 50 }}
         >
           <p>{isEnglish ? textEnglish : textSpanish}</p>
+          
+          <div className={styles.translateButtonContainer}>
           <button className={styles.translateButton} onClick={toggleLanguage}>
-            <FontAwesomeIcon icon={faLanguage} size="2x" />
+            <FontAwesomeIcon icon={faLanguage} size="2x" className={styles.icon} />
             {isEnglish ? ' Español' : ' English'}
           </button>
-    
+        </div>
         </motion.div>
       </motion.div>
       <div className={styles.fixedButtons}>

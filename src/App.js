@@ -56,7 +56,7 @@ const App = () => {
         <Route path="/desarrollosostenible/vista5" element={<Vista5DesarrolloSostenible />} />
 
         <Route path="/deporte" element={<Deporte />} />
-        {/* <Route path="/deporte/galeria" element={<GaleriaDeImagenes />} /> */}
+        <Route path="/deporte/galeria" element={<GaleriaDeImagenes />} />
         <Route path="/deporte/volverahome" element={<VolverAHome />} />
 
       </Routes>
