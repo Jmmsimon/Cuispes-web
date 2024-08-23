@@ -30,10 +30,10 @@
     ],
     "env": {
       "browser": true,
-      "serviceworker": true 
+      "serviceworker": true
     },
     "rules": {
-      "no-restricted-globals": "off" 
+      "no-restricted-globals": "off"
     }
   },
   "browserslist": {
@@ -47,5 +47,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2"
   }
 }

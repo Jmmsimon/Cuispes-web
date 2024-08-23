@@ -1,6 +1,7 @@
 const CACHE_NAME = 'yumbilla-cache-v1';
 const urlsToCache = [
   '/',
+  '/index.html',
   '/index.css',
   '/android-icon-192x192.png',
   '/apple-icon-180x180.png',
@@ -24,9 +25,11 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
+        // Return the cached response if available
         if (response) {
           return response;
         }
+        // Fetch the resource from the network if not in cache
         return fetch(event.request);
       })
   );

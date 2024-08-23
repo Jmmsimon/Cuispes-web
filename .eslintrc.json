@@ -1,10 +1,27 @@
 {
     "env": {
       "browser": true,
-      "serviceworker": true // Permite el uso de `self`
+      "es2021": true,
+      "react": true
     },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "react-app",
+      "react-app/jest"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react"
+    ],
     "rules": {
-      "no-restricted-globals": "off" // Desactiva la regla que restringe el uso de 'self'
+      // Puedes añadir reglas personalizadas aquí
     }
   }
   
