@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLanguage } from '@fortawesome/free-solid-svg-icons';
 import styles from './Vista4DesarrolloSostenible.module.css'; // Importa el módulo CSS
-import mapaImage from 'C:/Users/jeans/yumbilla/src/assets/mapa.png'; // Usa la misma imagen
+// import mapaImage from '../assets/mapa.png';
 import Botones from '../Botones'; // Asegúrate de que la ruta sea correcta
 
 const Vista4DesarrolloSostenible = () => {
@@ -56,7 +56,7 @@ const Vista4DesarrolloSostenible = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img src={mapaImage} alt="Mapa" />
+          {/* <img src={mapaImage} alt="Mapa" /> */}
         </motion.div>
       </motion.div>
       <div className={styles.translateButtonContainer}>

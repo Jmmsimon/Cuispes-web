@@ -1,0 +1,10 @@
+{
+    "env": {
+      "browser": true,
+      "serviceworker": true // Permite el uso de `self`
+    },
+    "rules": {
+      "no-restricted-globals": "off" // Desactiva la regla que restringe el uso de 'self'
+    }
+  }
+  

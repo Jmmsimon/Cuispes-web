@@ -27,7 +27,14 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "env": {
+      "browser": true,
+      "serviceworker": true 
+    },
+    "rules": {
+      "no-restricted-globals": "off" 
+    }
   },
   "browserslist": {
     "production": [

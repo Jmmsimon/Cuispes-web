@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from './Vista1DesarrolloSostenible.module.css'; // Importa el módulo CSS
-import ruletaImage from 'C:/Users/jeans/yumbilla/src/assets/ruleta.png';
+// import ruleta from '../assets/ruleta.png';
 import Botones from '../Botones'; // Asegúrate de que la ruta sea correcta
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLanguage } from '@fortawesome/free-solid-svg-icons';
@@ -58,7 +58,7 @@ const Vista1DesarrolloSostenible = () => {
         </button>
       </div>
       <div className={styles.odsImage}>
-        <img src={ruletaImage} alt="Ruleta ODS" />
+        {/* <img src={ruleta} alt="Ruleta ODS" /> */}
       </div>
       <Botones prevPath="/desarrollosostenible" nextPath="/desarrollosostenible/vista2" />
     </div>
