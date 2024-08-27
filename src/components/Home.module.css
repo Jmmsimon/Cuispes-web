@@ -21,26 +21,24 @@
 
 .nav-buttons {
   position: absolute;
-  top: 1rem; /* Se ha bajado más la posición de los botones */
+  bottom: 5rem; /* Ajusta la distancia desde la parte inferior */
   display: flex;
   gap: 1rem; /* Usar rem para mejor escalabilidad */
+  justify-content: center;
+  width: 100%; /* Asegúrate de que los botones estén centrados horizontalmente */
 }
 
 .nav-button {
-  background-color: #597f31;
-  color: white;
-  padding: 0.5rem 1rem; /* Ajuste de padding usando rem */
-  border-radius: 30px;
+  background-color: #5d5375;
+  color: #ffcf59;
+  padding: 0.5rem 2rem; /* Aumenta el padding para agrandar los botones */
+  border-radius: 40px; /* Ajusta el border-radius para mantener la proporción */
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 500; /* Aumenta ligeramente el grosor de la fuente */
+  font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
   font-style: normal;
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-}
-
-.nav-button:hover {
-  background-color: #ba3902;
-  transform: translateY(-0.2rem);
 }
 
 .text-container {
@@ -63,6 +61,7 @@
   font-family: 'Poppins', sans-serif; 
   text-transform: uppercase; /* Opcional, puede ayudar a ajustar el tamaño del texto */
 }
+
 /* Estilos para el botón de traducción */
 .translate-button {
   position: absolute;
@@ -71,10 +70,10 @@
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 30px;
+  padding: 0.75rem 1.5rem; /* Aumenta el padding para agrandar el botón */
+  border-radius: 40px; /* Ajusta el border-radius para mantener la proporción */
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.25rem; /* Aumenta el tamaño de la fuente */
   display: flex;
   align-items: center;
   transition: background-color 0.3s ease, transform 0.3s ease;

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faLanguage } from '@fortawesome/free-solid-svg-icons';
 import Botones from '../Botones'; 
 import styles from './Comunidad.module.css'; 
-import backgroundImage from '../../assets/banner_principal_comunidad.jpg'; 
+import backgroundImage from '../../assets/comunidad-img/porta-comunidad.jpg'; 
 
 const Comunidad = () => {
   const [isEnglish, setIsEnglish] = useState(false);

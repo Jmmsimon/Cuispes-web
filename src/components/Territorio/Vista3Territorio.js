@@ -23,9 +23,9 @@ const Vista3Territorio = () => {
       >
         <p className={styles.text}>
           El distrito de Cuispes cuenta con la clasificación de suelo: 
-          "Lithic Udorthents-Typic Dystrudepts", que describe a los suelos 
+          &quot;Lithic Udorthents-Typic Dystrudepts&quot;, que describe a los suelos 
           que se han alterado o perturbado significativamente por la actividad humana. 
-          La palabra "Lithic" indica que hay roca a 50 cm o menos de la superficie.
+          La palabra &quot;Lithic&quot; indica que hay roca a 50 cm o menos de la superficie.
         </p>
       </motion.div>
       <motion.div

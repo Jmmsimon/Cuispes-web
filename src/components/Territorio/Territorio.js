@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { faLanguage } from '@fortawesome/free-solid-svg-icons';
 import Botones from '../Botones'; 
 import styles from './Territorio.module.css'; 
 import backgroundImage from '../../assets/banner_territorio.jpg'; 

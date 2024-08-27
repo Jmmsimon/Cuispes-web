@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f4f4f4; /* Color de fondo opcional para mayor contraste */
+}
+
+.cardsContainer {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.cardImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 1rem;
+}
+
+.routeNumber {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.routeName {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.time {
+  font-size: 1rem;
+  color: #666;
+}

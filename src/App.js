@@ -4,10 +4,6 @@ import Home from './components/Home';
 import Comunidad from './components/Comunidad/Comunidad';
 import Vista1Comunidad from './components/Comunidad/Vista1Comunidad'; 
 import Vista2Comunidad from './components/Comunidad/Vista2Comunidad';
-import Video1Comunidad from './components/Comunidad/Video1Comunidad'; // Importa la nueva vista
-import Vista3Comunidad from './components/Comunidad/Vista3Comunidad'
-import Vista4Comunidad from './components/Comunidad/Vista4Comunidad'
-import Vista5Comunidad from './components/Comunidad/Vista5Comunidad'
 import CuentoComunidad from './components/Comunidad/CuentoComunidad';
 import VolverAHome from './components/VolverAHome/VolverAHome';
 import Territorio from './components/Territorio/Territorio';
@@ -15,12 +11,9 @@ import Vista1Territorio from './components/Territorio/Vista1Territorio'
 import Vista2Territorio from './components/Territorio/Vista2Territorio'
 import Vista3Territorio from './components/Territorio/Vista3Territorio'
 import Biodiversidad from './components/Biodiversidad/Biodiversidad';
-import DesarrolloSostenible from './components/DesarrolloSostenible/DesarrolloSostenible'
-import Vista1DesarrolloSostenible from './components/DesarrolloSostenible/Vista1DesarrolloSostenible';
-import Vista2DesarrolloSostenible from './components/DesarrolloSostenible/Vista2DesarrolloSostenible'
-import Vista3DesarrolloSostenible from './components/DesarrolloSostenible/Vista3DesarrolloSostenible'
-import Vista4DesarrolloSostenible from './components/DesarrolloSostenible/Vista4DesarrolloSostenible'
-import Vista5DesarrolloSostenible from './components/DesarrolloSostenible/Vista5DesarrolloSostenible'
+import Senderismo from './components/Senderismo/Senderismo'
+import CatarataYumbilla from './components/Senderismo/CatarataYumbilla';
+
 import Deporte from './components/Deporte/Deporte'
 
 import './App.css';
@@ -34,11 +27,9 @@ const App = () => {
         <Route path="/comunidad" element={<Comunidad />} />
         <Route path="/comunidad/vista1" element={<Vista1Comunidad />} />
         <Route path="/comunidad/vista2" element={<Vista2Comunidad />} />
-        <Route path="/comunidad/video1" element={<Video1Comunidad />} /> {/* Nueva ruta */}
-        <Route path="/comunidad/vista3" element={<Vista3Comunidad />} />
-        <Route path="/comunidad/vista4" element={<Vista4Comunidad />} />
-        <Route path="/comunidad/vista5" element={<Vista5Comunidad />} />
         <Route path="/comunidad/cuento" element={<CuentoComunidad />} />
+
+
         <Route path="/comunidad/volverahome" element={<VolverAHome />} />
         <Route path="/territorio" element={<Territorio />} />
         <Route path="/territorio/vista1" element={<Vista1Territorio />} />
@@ -48,12 +39,9 @@ const App = () => {
         <Route path="/territorio/volverahome" element={<VolverAHome />} />
         <Route path="/biodiversidad" element={<Biodiversidad />} />
         {/* <Route path="/biodiversidad/vista1" element={<Vista1Biodiversidad />} /> */}
-        <Route path="/desarrollosostenible" element={<DesarrolloSostenible />} />
-        <Route path="/desarrollosostenible/vista1" element={<Vista1DesarrolloSostenible />} />
-        <Route path="/desarrollosostenible/vista2" element={<Vista2DesarrolloSostenible />} />
-        <Route path="/desarrollosostenible/vista3" element={<Vista3DesarrolloSostenible />} />
-        <Route path="/desarrollosostenible/vista4" element={<Vista4DesarrolloSostenible />} />
-        <Route path="/desarrollosostenible/vista5" element={<Vista5DesarrolloSostenible />} />
+        <Route path="/senderismo" element={<Senderismo />} />
+        <Route path="/cataratayumbilla" element={<CatarataYumbilla />} />
+        <Route path="/senderismo/volverahome" element={<VolverAHome />} />
 
         <Route path="/deporte" element={<Deporte />} />
         <Route path="/deporte/galeria" element={<GaleriaDeImagenes />} />

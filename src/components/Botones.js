@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types'; // Importa PropTypes para validación
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faHome, faArrowRight, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import {  faHome,  faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import './Botones.css'; // Asegúrate de tener el archivo CSS para estilos
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft';
 
 const Botones = ({ prevPath, nextPath }) => {
   const navigate = useNavigate();
@@ -37,6 +37,12 @@ const Botones = ({ prevPath, nextPath }) => {
       </button>
     </div>
   );
+};
+
+// Define PropTypes for validation
+Botones.propTypes = {
+  prevPath: PropTypes.string,
+  nextPath: PropTypes.string
 };
 
 export default Botones;

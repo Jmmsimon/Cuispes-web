@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Botones from '../Botones';
 import styles from './Vista1Comunidad.module.css';
-import backgroundImage from '../../assets/banner_comunidad1.jpg';
+import backgroundImage from '../../assets/comunidad-img/portada-comunidad-2.jpg';
 import locationImage from '../../assets/ubicacion.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLanguage } from '@fortawesome/free-solid-svg-icons';

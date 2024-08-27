@@ -15,8 +15,8 @@
 
 .content {
   position: relative;
-  max-width: 600px; /* Ajustado para pantallas más grandes */
-  padding: 20px;
+  max-width: 500px; /* Ajustado para pantallas más grandes */
+  padding: 10px;
   color: white;
   z-index: 1;
   border-radius: 15px;
@@ -26,12 +26,12 @@
 
 .backgroundImage {
   position: absolute;
-  top: 0;
+  top: -0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: url('../../assets/VectorNube.png') no-repeat;
-  background-size: 50% auto; /* Ajusta la imagen para que cubra toda la pantalla */
+  background-size: 55% auto; /* Ajusta la imagen para que cubra toda la pantalla */
   background-position: bottom left; /* Ajusta la posición de la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   z-index: 0;
