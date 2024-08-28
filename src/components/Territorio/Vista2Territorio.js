@@ -41,11 +41,15 @@ const Vista2Comunidad = () => {
           transition={{ duration: 1.2, type: 'spring', stiffness: 50 }}
         >
           <p>{isEnglish ? textEnglish : textSpanish}</p>
+          
+        
+        </motion.div>
+        <div className={styles.translateButtonContainer}>
           <button className={styles.translateButton} onClick={toggleLanguage}>
-            <FontAwesomeIcon icon={faLanguage} size="2x" />
+            <FontAwesomeIcon icon={faLanguage} size="2x" className={styles.icon} />
             {isEnglish ? ' Español' : ' English'}
           </button>
-        </motion.div>
+        </div>
       </motion.div>
       <div className={styles.fixedButtons}>
         <Botones prevPath="/territorio/vista1" nextPath="/territorio/vista3" />

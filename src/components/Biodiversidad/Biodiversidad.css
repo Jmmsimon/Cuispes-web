@@ -6,21 +6,20 @@ body {
 }
 
 .container {
-  position: relative; /* Para posicionar los elementos hijos */
+  position: relative;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(135deg, #5d5375, #ff8a70, #029ba6, #ffd059);
-  background-size: cover; /* Fondo estático sin movimiento */
+  background: url('../../assets/biodiversidad/selva.jpg') no-repeat center center fixed;
+  background-size: cover; /* Asegura que la imagen cubra todo el fondo */
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
-  align-items: center; /* Centra verticalmente los elementos dentro de cada fila */
-  justify-content: center; /* Centra horizontalmente los elementos en el contenedor */
-  gap: 20px; /* Espacio entre las imágenes */
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
 }
-
 .image-container {
   width: 200px; /* Tamaño de las imágenes */
-  height: 200px; /* Tamaño de las imágenes */
+  height: auto; /* Ajusta la altura para acomodar el texto */
   display: flex;
   flex-direction: column; /* Coloca los elementos en una columna */
   align-items: center;
@@ -30,19 +29,21 @@ body {
 }
 
 .image {
-  width: 100%;
-  height: 100%;
+  width: 250px;
+  height: 250px; /* Ajusta la altura de la imagen */
   object-fit: cover; /* Mantiene la proporción y recorta la imagen si es necesario */
   border-radius: 50%; /* Hace que las imágenes sean circulares */
-  transition: opacity 0.3s;
+  border: 5px solid #f9d070; /* Añade un borde redondeado de color #f9d070 */
+  transition: opacity 0.3s; /* Mantiene la transición suave de la opacidad */
 }
 
 .image-name {
   margin-top: 10px; /* Espacio entre la imagen y el nombre */
-  font-size: 13px; /* Tamaño del texto */
-  color: #333; /* Color del texto */
+  font-size: 16px; /* Tamaño del texto */
+  color: #000000; /* Color del texto */
   text-align: center; /* Centra el texto */
-  max-width: 260px; /* Evita que el texto se desborde */
-  overflow: hidden; /* Oculta el texto que excede el contenedor */
-  text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es muy largo */
+  width: 100%; /* Evita que el texto se desborde */
+  background-color: rgba(249, 208, 112, 0.8); /* Fondo con un poco de transparencia */
+  padding: 5px 10px; /* Añade un poco de padding para un mejor aspecto */
+  border-radius: 10px; /* Bordes redondeados */
 }

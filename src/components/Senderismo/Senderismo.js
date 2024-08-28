@@ -1,28 +1,33 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Botones from '../Botones'; 
-import styles from './Senderismo.module.css'; 
-import catarataImage from '../../assets/Senderismo/Catarata_Yumbilla.jpg'; 
+import Botones from '../Botones';
+import styles from './Senderismo.module.css';
+import cascadaCristalImage from '../../assets/senderismo/cascada-cristal.jpg';
+import cascadaMedioCerroImage from '../../assets/senderismo/cascada-medio-cerro.jpg';
+import cataratayumbilla from '../../assets/home-img/HomePortada.jpg';
 
 const routes = [
   {
-    imgSrc: catarataImage,
+    imgSrc: cascadaCristalImage,
     routeNumber: 'Ruta 1',
-    routeName: 'Nombre de la Ruta 1',
-    time: '30 min',
-    path: '/cataratayumbilla'
+    routeName: 'Cascada Medio Cerro',
+    time: '1 h 23 min (4,5 km)',
+    path: '/cascada-medio-cerro'
+
   },
   {
-    imgSrc: catarataImage,
+    imgSrc: cascadaMedioCerroImage,
     routeNumber: 'Ruta 2',
-    routeName: 'Nombre de la Ruta 2',
-    time: '45 min'
+    routeName: 'Cascada Cristal',
+    time: '1 h 47 min (4,8 km)',
+    path: '/cascada-cristal'
   },
   {
-    imgSrc: catarataImage,
+    imgSrc: cataratayumbilla,
     routeNumber: 'Ruta 3',
-    routeName: 'Nombre de la Ruta 3',
-    time: '1 hr'
+    routeName: 'Catarata Yumbilla',
+    time: '1 h 54 min (5,1 km)',
+    path: '/cataratayumbilla'
   }
 ];
 
@@ -51,7 +56,7 @@ const Senderismo = () => {
           </div>
         ))}
       </div>
-      <Botones prevPath="" nextPath="/senderismo/cataratayumbilla" /> 
+      <Botones prevPath="" nextPath="" />
     </div>
   );
 };

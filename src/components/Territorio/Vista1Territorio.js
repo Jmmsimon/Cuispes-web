@@ -46,13 +46,14 @@ const Vista1Comunidad = () => {
         >
           <p>{isEnglish ? textEnglish : textSpanish}</p>
           
-          <div className={styles.translateButtonContainer}>
-          <button className={styles.translateButton} onClick={toggleLanguage}>
-            <FontAwesomeIcon icon={faLanguage} size="2x" className={styles.icon} />
-            {isEnglish ? ' Español' : ' English'}
-          </button>
-        </div>
+         
         </motion.div>
+        <div className={styles.translateButtonContainer}>
+            <button className={styles.translateButton} onClick={toggleLanguage}>
+              <FontAwesomeIcon icon={faLanguage} size="2x" className={styles.icon} />
+              {isEnglish ? ' Español' : ' English'}
+            </button>
+          </div>
       </motion.div>
       <div className={styles.fixedButtons}>
         <Botones prevPath="/territorio" nextPath="/territorio/vista2" />

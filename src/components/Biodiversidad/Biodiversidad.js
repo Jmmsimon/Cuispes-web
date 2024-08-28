@@ -86,7 +86,7 @@ const Biodiversidad = () => {
           onClick={() => handleImageClick(index)}
         >
           <img src={images[index]} alt={detail.name} className="image" />
-          <div className="image-name" style={{fontWeight:'bold'}}>{detail.name}</div>
+          <div className="image-name">{detail.name}</div> {/* Añadido el nombre debajo de la imagen */}
         </div>
       ))}
       {selectedImage && (

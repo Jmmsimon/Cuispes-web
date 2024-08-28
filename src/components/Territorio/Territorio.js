@@ -14,8 +14,8 @@ const Territorio = () => {
     setIsEnglish(!isEnglish);
   };
 
-  const titleSpanish = 'Territorio';
-  const titleEnglish = 'Territory';
+  const titleSpanish = 'TERRITORIO';
+  const titleEnglish = 'TERRITORY';
 
   return (
     <>
