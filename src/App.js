@@ -11,6 +11,8 @@ import Vista1Territorio from './components/Territorio/Vista1Territorio'
 import Vista2Territorio from './components/Territorio/Vista2Territorio'
 import Vista3Territorio from './components/Territorio/Vista3Territorio'
 import Biodiversidad from './components/Biodiversidad/Biodiversidad';
+import Fauna from './components/Biodiversidad/Fauna';
+import Flora from './components/Biodiversidad/Flora'
 import Senderismo from './components/Senderismo/Senderismo'
 import CatarataYumbilla from './components/Senderismo/CatarataYumbilla';
 import CascadaCristal from './components/Senderismo/CascadaCristal';
@@ -39,14 +41,17 @@ const App = () => {
 
         <Route path="/territorio/volverahome" element={<VolverAHome />} />
         <Route path="/biodiversidad" element={<Biodiversidad />} />
+        <Route path="/biodiversidad/volverahome" element={<VolverAHome />} />
+        <Route path="/fauna" element={<Fauna />} />
+        <Route path="/flora" element={<Flora />} />
+
+
         {/* <Route path="/biodiversidad/vista1" element={<Vista1Biodiversidad />} /> */}
         <Route path="/senderismo" element={<Senderismo />} />
         <Route path="/cataratayumbilla" element={<CatarataYumbilla />} />
         <Route path="/cascada-cristal" element={<CascadaCristal />} />
         <Route path="/cascada-medio-cerro" element={<CascadaMedioCerro />} />
-        
         <Route path="/senderismo/volverahome" element={<VolverAHome />} />
-
         <Route path="/deporte" element={<Deporte />} />
         <Route path="/deporte/galeria" element={<GaleriaDeImagenes />} />
         <Route path="/deporte/volverahome" element={<VolverAHome />} />

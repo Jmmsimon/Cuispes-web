@@ -1,21 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './Modal.css'; // Asegúrate de que esta ruta es correcta
+import './Modal.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
 const Modal = ({ isOpen, onClose, image, name, location, info, habitat, diet, behavior, conservation, audioSrc }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [audio] = useState(new Audio(audioSrc));
+  const [audio] = useState(audioSrc ? new Audio(audioSrc) : null);
 
   const handlePlayPause = () => {
-    if (isPlaying) {
+    if (isPlaying && audio) {
       audio.pause();
-    } else {
+    } else if (audio) {
       audio.play();
     }
     setIsPlaying(!isPlaying);
   };
+
+  useEffect(() => {
+    if (!isOpen) {
+      if (audio) {
+        audio.pause();
+        setIsPlaying(false);
+      }
+    }
+
+    return () => {
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;  // Reset audio to the start
+      }
+    };
+  }, [isOpen, audio]);
 
   if (!isOpen) return null;
 
@@ -31,27 +47,30 @@ const Modal = ({ isOpen, onClose, image, name, location, info, habitat, diet, be
           />
         </div>
         <div className="modal-body">
-          <img src={image} alt={name} className="modal-image" />
-          <p><strong>Localización:</strong> {location}</p>
-          <p><strong>Información:</strong> {info}</p>
-          <p><strong>Hábitat:</strong> {habitat}</p>
-          <p><strong>Alimentación:</strong> {diet}</p>
-          <p><strong>Comportamiento:</strong> {behavior}</p>
-          <p><strong>Conservación:</strong> {conservation}</p>
-          <div className="audio-controls">
-            <audio id="audio" controls>
-              <source src={audioSrc} type="audio/mp3" />
-              Your browser does not support the audio element.
-            </audio>
+          <div className="modal-image-container">
+            <img src={image} alt={name} className="modal-image" />
           </div>
-          
+          <div className="modal-info">
+            <p><strong>Localización:</strong> {location}</p>
+            <p><strong>Información:</strong> {info}</p>
+            <p><strong>Hábitat:</strong> {habitat}</p>
+            <p><strong>Alimentación:</strong> {diet}</p>
+            <p><strong>Comportamiento:</strong> {behavior}</p>
+            <p><strong>Conservación:</strong> {conservation}</p>
+            {audioSrc && (
+              <div className="audio-controls">
+                <button onClick={handlePlayPause} className="audio-button">
+                  <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} />
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-// Definir tipos y requisitos de las props
 Modal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
@@ -63,7 +82,7 @@ Modal.propTypes = {
   diet: PropTypes.string.isRequired,
   behavior: PropTypes.string.isRequired,
   conservation: PropTypes.string.isRequired,
-  audioSrc: PropTypes.string.isRequired,
+  audioSrc: PropTypes.string,
 };
 
 export default Modal;

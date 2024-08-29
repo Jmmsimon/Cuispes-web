@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url('../../assets/biodiversidad/selva.jpg') no-repeat center center fixed;
+  background-size: cover; 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.title {
+  position: absolute;
+  color: white;
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  top: 5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 4em; 
+  font-family: 'Poppins', sans-serif; 
+  text-transform: uppercase;
+}
+.image-container {
+  width: 200px; /* Tamaño de las imágenes */
+  height: auto; /* Ajusta la altura para acomodar el texto */
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en una columna */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.image {
+  width: 250px;
+  height: 250px; /* Ajusta la altura de la imagen */
+  object-fit: cover; /* Mantiene la proporción y recorta la imagen si es necesario */
+  border-radius: 50%; /* Hace que las imágenes sean circulares */
+  border: 5px solid #f9d070; /* Añade un borde redondeado de color #f9d070 */
+  transition: opacity 0.3s; /* Mantiene la transición suave de la opacidad */
+}
+
+.image-name {
+  margin-top: 10px; /* Espacio entre la imagen y el nombre */
+  font-size: 16px; /* Tamaño del texto */
+  color: #000000; /* Color del texto */
+  text-align: center; /* Centra el texto */
+  width: 100%; /* Evita que el texto se desborde */
+  background-color: rgba(249, 208, 112, 0.8); /* Fondo con un poco de transparencia */
+  padding: 5px 10px; /* Añade un poco de padding para un mejor aspecto */
+  border-radius: 10px; /* Bordes redondeados */
+}

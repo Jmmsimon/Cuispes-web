@@ -9,13 +9,26 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: url('../../assets/biodiversidad/selva.jpg') no-repeat center center fixed;
-  background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+  background: url('../../assets/home-img/HomePortada.jpg') no-repeat center center fixed;
+  background-size: cover; 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 100px;
+}
+.title {
+  position: absolute;
+  color: white;
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  top: 5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 4em; 
+  font-family: 'Poppins', sans-serif; 
+  text-transform: uppercase;
 }
 .image-container {
   width: 200px; /* Tamaño de las imágenes */
@@ -39,7 +52,8 @@ body {
 
 .image-name {
   margin-top: 10px; /* Espacio entre la imagen y el nombre */
-  font-size: 16px; /* Tamaño del texto */
+  font-size: 18px; /* Tamaño del texto */
+  font-weight: 700;
   color: #000000; /* Color del texto */
   text-align: center; /* Centra el texto */
   width: 100%; /* Evita que el texto se desborde */
