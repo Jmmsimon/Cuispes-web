@@ -38,7 +38,7 @@ const Modal = ({ isOpen, onClose, image, name, location, info, habitat, diet, be
   return (
     <div className="modal">
       <div className="modal-content">
-        <div className="modal-header">
+        <div className="modal-header-card">
           <h2 className="modal-title">{name}</h2>
           <FontAwesomeIcon
             icon={faTimes}

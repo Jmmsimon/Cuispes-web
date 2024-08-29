@@ -13,7 +13,6 @@
 
 .modal-content {
   background: #f9d070;
-  padding: 20px;
   border-radius: 8px;
   max-width: 900px;
   width: 90%;
@@ -22,32 +21,39 @@
   flex-direction: column;
 }
 
-.modal-header {
+.modal-header-card {
+  background: #009ba8; /* Slightly different background to visually separate from content */
+  border-radius: 8px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  color: #5d5375;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  margin-bottom: -10px; /* Adjust as needed to visually connect with content */
 }
 
 .modal-title {
-  font-size: 1.5em;
+  font-size: 37px;
   font-weight: bold;
-  color: #5d5375;
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  flex: 1; /* Ensures the title takes available space and stays centered */
 }
 
 .modal-close {
-  font-size: 1.2em;
+  font-size: 1.5em;
   cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  right: 2rem;
+  color:  white;
+  position: relative;
 }
 
 .modal-body {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  padding: 15px;
+  background: #f9d070; /* Match with content background */
+  border-radius: 0px 0px 8px 8px;
 }
 
 .modal-image-container {
@@ -91,4 +97,5 @@
   border: none;
   cursor: pointer;
   font-size: 1.5em;
+  color: white;
 }

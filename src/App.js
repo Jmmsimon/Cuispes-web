@@ -17,6 +17,7 @@ import Senderismo from './components/Senderismo/Senderismo'
 import CatarataYumbilla from './components/Senderismo/CatarataYumbilla';
 import CascadaCristal from './components/Senderismo/CascadaCristal';
 import CascadaMedioCerro from './components/Senderismo/CascadaMedioCerro'
+import Rutas from './components/Senderismo/Rutas'
 import Deporte from './components/Deporte/Deporte'
 
 import './App.css';
@@ -48,10 +49,14 @@ const App = () => {
 
         {/* <Route path="/biodiversidad/vista1" element={<Vista1Biodiversidad />} /> */}
         <Route path="/senderismo" element={<Senderismo />} />
+        <Route path="/rutas" element={<Rutas />} />
         <Route path="/cataratayumbilla" element={<CatarataYumbilla />} />
         <Route path="/cascada-cristal" element={<CascadaCristal />} />
         <Route path="/cascada-medio-cerro" element={<CascadaMedioCerro />} />
         <Route path="/senderismo/volverahome" element={<VolverAHome />} />
+
+
+
         <Route path="/deporte" element={<Deporte />} />
         <Route path="/deporte/galeria" element={<GaleriaDeImagenes />} />
         <Route path="/deporte/volverahome" element={<VolverAHome />} />
